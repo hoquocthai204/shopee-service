@@ -2,7 +2,7 @@
 # Server specific properties
 # ===================================================================
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
   # port: 10000
   error:
     include-stacktrace: never
