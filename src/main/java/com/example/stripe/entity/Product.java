@@ -53,4 +53,8 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "merchant_id", nullable = false)
     private Merchant merchant;
+
+    @Column(name = "is_deleted", columnDefinition = "tinyint(1) default 0")
+    private boolean deleted;
+
 }

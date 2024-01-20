@@ -43,7 +43,8 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductResponseDto> getAllProduct() {
         List<Product> products = productRepository.findAll();
-        List<ProductResponseDto> dtos = products.stream().map(e -> productMapper.toDto(e)).collect(Collectors.toList());
+        List<ProductResponseDto> dtos = products.stream().filter(ele -> !ele.isDeleted())
+                .map(e -> productMapper.toDto(e)).collect(Collectors.toList());
         return dtos;
     }
 
@@ -68,7 +69,7 @@ public class ProductServiceImpl implements ProductService {
                 .orElseThrow(() -> new MerchantException("Merchant is not found"));
 
         List<Product> products = productRepository.findAll();
-        return products.stream().filter((e) -> e.getMerchant().getId() == merchant.getId())
+        return products.stream().filter((e) -> e.getMerchant().getId() == merchant.getId() && !e.isDeleted())
                 .map(e -> productMapper.toDto(e))
                 .collect(Collectors.toList());
     }
@@ -76,7 +77,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public void deleteProduct(Long productId) {
-        productRepository.deleteById(productId);
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new ProductException("product is not found"));
+        product.setDeleted(true);
+        // productRepository.deleteById(productId);
     }
 
     @Override
