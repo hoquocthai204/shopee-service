@@ -2,7 +2,8 @@
 # Server specific properties
 # ===================================================================
 server:
-  port: 8000
+  # port: 8000
+  port: 10000
   error:
     include-stacktrace: never
 # ===================================================================
@@ -11,6 +12,7 @@ server:
 spring:
   application:
     name: stripe-service
+
   # datasource:
   #   platform: mysql
   #   driver-class-name: com.mysql.jdbc.Driver
@@ -40,8 +42,11 @@ spring:
     hibernate:
       ddl-auto: update
 
+  # redis:
+  #   host: ${REDIS_HOST:localhost}
+  #   port: ${REDIS_PORT:6379}
   redis:
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST:red-cmlnv9gl5elc73c6gkh0}
     port: ${REDIS_PORT:6379}
 
 application:
