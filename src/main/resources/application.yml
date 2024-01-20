@@ -46,7 +46,7 @@ spring:
   #   host: ${REDIS_HOST:localhost}
   #   port: ${REDIS_PORT:6379}
   redis:
-    host: ${REDIS_HOST:red-cmlnv9gl5elc73c6gkh0}
+    host: ${REDIS_HOST:red-cmlnv9gl5elc73c6gkh0:SXeTvsf2GVH2kxY0Pbydqf5oyOC9ZaJa@singapore-redis.render.com}
     port: ${REDIS_PORT:6379}
 
 application:
