@@ -53,8 +53,7 @@ application:
     base-64-secret: ${JWT_BASE_64_SECRET:eGNoanU4YWhkZnV5aWFzaGRpdWFzaGJkaXVhc2hkYml1YXNkaHVpYXNkYXNoZHVpYXNoZCB1aWFzaGR1aWFzdWRoYXN1aWRoYXVpcw==}
     token-validity-in-seconds: ${JWT_VALIDITY_IN_SECONDS:3600}
   cors:
-    # allowed-origins: ${CORS_ALLOW_ORIGINS:http://localhost:3000/}
-    allowed-origins: ${CORS_ALLOW_ORIGINS:https://shopee-ui-git-main-hoquocthai204.vercel.app/}
+    allowed-origins: ${CORS_ALLOW_ORIGINS:http://localhost:3000/}
 
     allowed-methods: ${CORS_ALLOW_METHODS:*}
     allowed-headers: ${CORS_ALLOW_HEADERS:*}
