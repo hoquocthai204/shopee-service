@@ -42,24 +42,26 @@ spring:
     hibernate:
       ddl-auto: update
 
-  # redis:
-  #   host: ${REDIS_HOST:localhost}
-  #   port: ${REDIS_PORT:6379}
   redis:
-    host: ${REDIS_HOST:red-cmlnv9gl5elc73c6gkh0:SXeTvsf2GVH2kxY0Pbydqf5oyOC9ZaJa@singapore-redis.render.com}
-    port: ${REDIS_PORT:6379}
+    host: ${REDIS_HOST:redis-12744.c1.asia-northeast1-1.gce.cloud.redislabs.com}
+    port: ${REDIS_PORT:12744}
+    username: ${REDIS_USERNAME:dyl-root}
+    password: ${REDIS_PASSWORD:Y$AHYpAFN@mXT2elBcXU}
 
 application:
   jwt:
     base-64-secret: ${JWT_BASE_64_SECRET:eGNoanU4YWhkZnV5aWFzaGRpdWFzaGJkaXVhc2hkYml1YXNkaHVpYXNkYXNoZHVpYXNoZCB1aWFzaGR1aWFzdWRoYXN1aWRoYXVpcw==}
     token-validity-in-seconds: ${JWT_VALIDITY_IN_SECONDS:3600}
   cors:
+    # allowed-origins: ${CORS_ALLOW_ORIGINS:http://localhost:3000/}
     allowed-origins: ${CORS_ALLOW_ORIGINS:https://shopee-ui-liard.vercel.app/}
+
     allowed-methods: ${CORS_ALLOW_METHODS:*}
     allowed-headers: ${CORS_ALLOW_HEADERS:*}
     exposed-headers: ${CORS_EXPOSED_HEADERS:*}
     allow-credentials: ${CORS_ALLOW_CREDENTIALS:true}
   gateway:
+    # url: ${GATEWAY_URL:http://localhost:8000/}
     url: ${GATEWAY_URL:https://shopee-service-ez34.onrender.com/}
 
 stripe:
@@ -67,5 +69,7 @@ stripe:
     public: ${STRIPE_PUBLIC_KEY:pk_test_51M1joFFxmXEqCrlHEQJaweGDQZCI4PbEuLsGdrRNqCuMLs7PcPcNfCMjmqWqM453M7MWtxbKvVlRzi24yUhXyt6Y00vIVTjUMU}
     secret: ${STRIPE_SECRET_KEY:sk_test_51M1joFFxmXEqCrlHj7O7LDpNgxVPpMG8xakc8gAQBcRHg0u5GqvkH9MBnmPum1AIqaZGdZBV0p2e2GY1oXBtn86D00Ht7rCzpU}
   webhook:
+    # endpoint-url: ${ENDPOINT_URL:http://localhost:8000/}
     endpoint-url: ${ENDPOINT_URL:https://shopee-service-ez34.onrender.com/}
+
     endpoint-secret: ${ENDPOINT_SECRET:whsec_f5c95d72e6fa393b492a9c69555f287020bc80c11b58976feb03854200dd1549}
