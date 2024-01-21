@@ -54,7 +54,7 @@ application:
     base-64-secret: ${JWT_BASE_64_SECRET:eGNoanU4YWhkZnV5aWFzaGRpdWFzaGJkaXVhc2hkYml1YXNkaHVpYXNkYXNoZHVpYXNoZCB1aWFzaGR1aWFzdWRoYXN1aWRoYXVpcw==}
     token-validity-in-seconds: ${JWT_VALIDITY_IN_SECONDS:3600}
   cors:
-    allowed-origins: ${CORS_ALLOW_ORIGINS:https://shopee-ui-liard.vercel.app/}
+    allowed-origins: ${CORS_ALLOW_ORIGINS:*}
     allowed-methods: ${CORS_ALLOW_METHODS:*}
     allowed-headers: ${CORS_ALLOW_HEADERS:*}
     exposed-headers: ${CORS_EXPOSED_HEADERS:*}
@@ -67,5 +67,5 @@ stripe:
     public: ${STRIPE_PUBLIC_KEY:pk_test_51M1joFFxmXEqCrlHEQJaweGDQZCI4PbEuLsGdrRNqCuMLs7PcPcNfCMjmqWqM453M7MWtxbKvVlRzi24yUhXyt6Y00vIVTjUMU}
     secret: ${STRIPE_SECRET_KEY:sk_test_51M1joFFxmXEqCrlHj7O7LDpNgxVPpMG8xakc8gAQBcRHg0u5GqvkH9MBnmPum1AIqaZGdZBV0p2e2GY1oXBtn86D00Ht7rCzpU}
   webhook:
-    endpoint-url: ${ENDPOINT_URL:https://shopee-service-ez34.onrender.com}
+    endpoint-url: ${ENDPOINT_URL:https://shopee-service-ez34.onrender.com/}
     endpoint-secret: ${ENDPOINT_SECRET:whsec_f5c95d72e6fa393b492a9c69555f287020bc80c11b58976feb03854200dd1549}
