@@ -2,7 +2,7 @@
 # Server specific properties
 # ===================================================================
 server:
-  port: ${SERVER_PORT:8080}
+  port: ${SERVER_PORT:8000}
   # port: 10000
   error:
     include-stacktrace: never
@@ -20,18 +20,11 @@ spring:
   #   username: ${DB_USERNAME:root}
   #   password: ${DB_PASSWORD:root}
 
-  # datasource:
-  #   platform: mysql
-  #   url: ${DB_URL:jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12677445}
-  #   username: sql12677445
-  #   password: tlZCYAuQ6a
-  #   driver-class-name: com.mysql.cj.jdbc.Driver
-
   datasource:
     platform: mysql
     url: ${DB_URL:jdbc:mysql://103.97.126.22:3306/njzttcxi_stripe-service}
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:root}
+    username: ${DB_USERNAME:njzttcxi_root}
+    password: ${DB_PASSWORD:01204899282}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -43,10 +36,10 @@ spring:
       ddl-auto: update
 
   redis:
-    host: ${REDIS_HOST:redis-12744.c1.asia-northeast1-1.gce.cloud.redislabs.com}
-    port: ${REDIS_PORT:12744}
-    username: ${REDIS_USERNAME:dyl-root}
-    password: ${REDIS_PASSWORD:Y$AHYpAFN@mXT2elBcXU}
+    host: ${REDIS_HOST:redis-18835.c1.ap-southeast-1-1.ec2.cloud.redislabs.com}
+    port: ${REDIS_PORT:18835}
+    username: ${REDIS_USERNAME:default}
+    password: ${REDIS_PASSWORD:ttLUKcEaNkaUkvXmh98RnQFl9MiF0wny}
 
 application:
   jwt:
@@ -60,15 +53,13 @@ application:
     exposed-headers: ${CORS_EXPOSED_HEADERS:*}
     allow-credentials: ${CORS_ALLOW_CREDENTIALS:true}
   gateway:
-    # url: ${GATEWAY_URL:http://localhost:8000/}
-    url: ${GATEWAY_URL:https://shopee-service-ez34.onrender.com/}
+    url: ${GATEWAY_URL:http://localhost:8000/}
 
 stripe:
   keys:
     public: ${STRIPE_PUBLIC_KEY:pk_test_51M1joFFxmXEqCrlHEQJaweGDQZCI4PbEuLsGdrRNqCuMLs7PcPcNfCMjmqWqM453M7MWtxbKvVlRzi24yUhXyt6Y00vIVTjUMU}
     secret: ${STRIPE_SECRET_KEY:sk_test_51M1joFFxmXEqCrlHj7O7LDpNgxVPpMG8xakc8gAQBcRHg0u5GqvkH9MBnmPum1AIqaZGdZBV0p2e2GY1oXBtn86D00Ht7rCzpU}
   webhook:
-    # endpoint-url: ${ENDPOINT_URL:http://localhost:8000/}
-    endpoint-url: ${ENDPOINT_URL:https://shopee-service-ez34.onrender.com/}
+    endpoint-url: ${ENDPOINT_URL:http://localhost:8000/}
 
     endpoint-secret: ${ENDPOINT_SECRET:whsec_f5c95d72e6fa393b492a9c69555f287020bc80c11b58976feb03854200dd1549}
