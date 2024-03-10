@@ -36,10 +36,10 @@ spring:
       ddl-auto: update
 
   redis:
-    host: ${REDIS_HOST:redis-18835.c1.ap-southeast-1-1.ec2.cloud.redislabs.com}
-    port: ${REDIS_PORT:18835}
+    host: ${REDIS_HOST:redis-14089.c1.ap-southeast-1-1.ec2.cloud.redislabs.com}
+    port: ${REDIS_PORT:14089}
     username: ${REDIS_USERNAME:default}
-    password: ${REDIS_PASSWORD:ttLUKcEaNkaUkvXmh98RnQFl9MiF0wny}
+    password: ${REDIS_PASSWORD:zLLgnZQrGIQMPWAjNireSPLJkgDFE1JC}
 
 application:
   jwt:
